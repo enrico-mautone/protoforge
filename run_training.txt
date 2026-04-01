@@ -1,0 +1,6 @@
+python protoforge_train_csv.py \
+    --csv-path protoforge_train_5k.csv \
+    --epochs 10 \
+    --batch-size 8 \
+    --eval-after \
+    --test-samples 200

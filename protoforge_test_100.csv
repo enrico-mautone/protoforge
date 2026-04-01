@@ -1,0 +1,2160 @@
+id,domain,natural_language,proto_code,split
+proto_400,pagamenti,"Crea servizio per pagamenti con transazione id, importo","syntax = ""proto3"";
+
+message Pagamento {
+  string transazione_id = 1;
+  double importo = 2;
+}
+
+message PagamentoList {
+  repeated Pagamento items = 1;
+}
+
+message Empty {}
+
+message PagamentoId {
+  string id = 1;
+}
+",test
+proto_401,file,"Gestisci file con file id, nome, dimensione","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+  int64 dimensione = 3;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+
+service FileService {
+  rpc GetAll (Empty) returns (FileList);
+  rpc GetById (FileId) returns (File);
+  rpc Create (File) returns (File);
+}",test
+proto_402,inventario,"Crea servizio per inventario con sku, quantita disponibile, magazzino","syntax = ""proto3"";
+
+message Inventario {
+  string sku = 1;
+  int32 quantita_disponibile = 2;
+  string magazzino = 3;
+}
+
+message InventarioList {
+  repeated Inventario items = 1;
+}
+
+message Empty {}
+
+message InventarioId {
+  string id = 1;
+}
+
+service InventarioService {
+  rpc GetAll (Empty) returns (InventarioList);
+  rpc GetById (InventarioId) returns (Inventario);
+  rpc Create (Inventario) returns (Inventario);
+}",test
+proto_403,chat,"Sistema di chat con messaggio id, mittente, testo","syntax = ""proto3"";
+
+message Chat {
+  string messaggio_id = 1;
+  string mittente = 2;
+  string testo = 3;
+}
+
+message ChatList {
+  repeated Chat items = 1;
+}
+
+message Empty {}
+
+message ChatId {
+  string id = 1;
+}
+
+service ChatService {
+  rpc GetAll (Empty) returns (ChatList);
+  rpc GetById (ChatId) returns (Chat);
+  rpc Create (Chat) returns (Chat);
+}",test
+proto_404,pagamenti,"Gestisci pagamenti con transazione id, importo","syntax = ""proto3"";
+
+message Pagamento {
+  string transazione_id = 1;
+  double importo = 2;
+}
+
+message PagamentoList {
+  repeated Pagamento items = 1;
+}
+
+message Empty {}
+
+message PagamentoId {
+  string id = 1;
+}
+",test
+proto_405,file,"Sistema di file con file id, nome","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+
+service FileService {
+  rpc GetAll (Empty) returns (FileList);
+  rpc GetById (FileId) returns (File);
+  rpc Create (File) returns (File);
+}",test
+proto_406,ordini,"Gestisci ordini con order id, customer id, totale","syntax = ""proto3"";
+
+message Ordino {
+  string order_id = 1;
+  string customer_id = 2;
+  double totale = 3;
+}
+
+message OrdinoList {
+  repeated Ordino items = 1;
+}
+
+message Empty {}
+
+message OrdinoId {
+  string id = 1;
+}
+
+service OrdinoService {
+  rpc GetAll (Empty) returns (OrdinoList);
+  rpc GetById (OrdinoId) returns (Ordino);
+  rpc Create (Ordino) returns (Ordino);
+}",test
+proto_407,sensori,"Crea servizio per sensori con sensore id, temperatura, umidita","syntax = ""proto3"";
+
+message Sensoro {
+  string sensore_id = 1;
+  double temperatura = 2;
+  double umidita = 3;
+}
+
+message SensoroList {
+  repeated Sensoro items = 1;
+}
+
+message Empty {}
+
+message SensoroId {
+  string id = 1;
+}
+
+service SensoroService {
+  rpc GetAll (Empty) returns (SensoroList);
+  rpc GetById (SensoroId) returns (Sensoro);
+  rpc Create (Sensoro) returns (Sensoro);
+}",test
+proto_408,prodotti,"Gestisci prodotti con sku, nome, prezzo","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+  double prezzo = 3;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+
+service ProdottoService {
+  rpc GetAll (Empty) returns (ProdottoList);
+  rpc GetById (ProdottoId) returns (Prodotto);
+  rpc Create (Prodotto) returns (Prodotto);
+}",test
+proto_409,pagamenti,"Sistema di pagamenti con transazione id, importo","syntax = ""proto3"";
+
+message Pagamento {
+  string transazione_id = 1;
+  double importo = 2;
+}
+
+message PagamentoList {
+  repeated Pagamento items = 1;
+}
+
+message Empty {}
+
+message PagamentoId {
+  string id = 1;
+}
+
+service PagamentoService {
+  rpc GetAll (Empty) returns (PagamentoList);
+  rpc GetById (PagamentoId) returns (Pagamento);
+  rpc Create (Pagamento) returns (Pagamento);
+}",test
+proto_410,utenti,"API per utenti con email, nome, cognome","syntax = ""proto3"";
+
+message Utento {
+  string email = 1;
+  string nome = 2;
+  string cognome = 3;
+}
+
+message UtentoList {
+  repeated Utento items = 1;
+}
+
+message Empty {}
+
+message UtentoId {
+  string id = 1;
+}
+
+service UtentoService {
+  rpc GetAll (Empty) returns (UtentoList);
+  rpc GetById (UtentoId) returns (Utento);
+  rpc Create (Utento) returns (Utento);
+}",test
+proto_411,file,"Gestisci file con file id, nome","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+
+service FileService {
+  rpc GetAll (Empty) returns (FileList);
+  rpc GetById (FileId) returns (File);
+  rpc Create (File) returns (File);
+}",test
+proto_412,ordini,"Sistema di ordini con order id, customer id, totale","syntax = ""proto3"";
+
+message Ordino {
+  string order_id = 1;
+  string customer_id = 2;
+  double totale = 3;
+}
+
+message OrdinoList {
+  repeated Ordino items = 1;
+}
+
+message Empty {}
+
+message OrdinoId {
+  string id = 1;
+}
+
+service OrdinoService {
+  rpc GetAll (Empty) returns (OrdinoList);
+  rpc GetById (OrdinoId) returns (Ordino);
+  rpc Create (Ordino) returns (Ordino);
+}",test
+proto_413,sensori,"Gestisci sensori con sensore id, temperatura, umidita","syntax = ""proto3"";
+
+message Sensoro {
+  string sensore_id = 1;
+  double temperatura = 2;
+  double umidita = 3;
+}
+
+message SensoroList {
+  repeated Sensoro items = 1;
+}
+
+message Empty {}
+
+message SensoroId {
+  string id = 1;
+}
+
+service SensoroService {
+  rpc GetAll (Empty) returns (SensoroList);
+  rpc GetById (SensoroId) returns (Sensoro);
+  rpc Create (Sensoro) returns (Sensoro);
+}",test
+proto_414,prodotti,"Sistema di prodotti con sku, nome, prezzo","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+  double prezzo = 3;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+
+service ProdottoService {
+  rpc GetAll (Empty) returns (ProdottoList);
+  rpc GetById (ProdottoId) returns (Prodotto);
+  rpc Create (Prodotto) returns (Prodotto);
+}",test
+proto_415,file,"Crea servizio per file con file id, nome, dimensione","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+  int64 dimensione = 3;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+",test
+proto_416,prodotti,"Gestisci prodotti con sku, nome, prezzo","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+  double prezzo = 3;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+
+service ProdottoService {
+  rpc GetAll (Empty) returns (ProdottoList);
+  rpc GetById (ProdottoId) returns (Prodotto);
+  rpc Create (Prodotto) returns (Prodotto);
+}",test
+proto_417,ordini,"Crea servizio per ordini con order id, customer id","syntax = ""proto3"";
+
+message Ordino {
+  string order_id = 1;
+  string customer_id = 2;
+}
+
+message OrdinoList {
+  repeated Ordino items = 1;
+}
+
+message Empty {}
+
+message OrdinoId {
+  string id = 1;
+}
+
+service OrdinoService {
+  rpc GetAll (Empty) returns (OrdinoList);
+  rpc GetById (OrdinoId) returns (Ordino);
+  rpc Create (Ordino) returns (Ordino);
+}",test
+proto_418,notifiche,"API per notifiche con notifica id, utente id","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+
+service NotificheService {
+  rpc GetAll (Empty) returns (NotificheList);
+  rpc GetById (NotificheId) returns (Notifiche);
+  rpc Create (Notifiche) returns (Notifiche);
+}",test
+proto_419,ordini,"API per ordini con order id, customer id, totale","syntax = ""proto3"";
+
+message Ordino {
+  string order_id = 1;
+  string customer_id = 2;
+  double totale = 3;
+}
+
+message OrdinoList {
+  repeated Ordino items = 1;
+}
+
+message Empty {}
+
+message OrdinoId {
+  string id = 1;
+}
+",test
+proto_420,prodotti,"Gestisci prodotti con sku, nome, prezzo","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+  double prezzo = 3;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+
+service ProdottoService {
+  rpc GetAll (Empty) returns (ProdottoList);
+  rpc GetById (ProdottoId) returns (Prodotto);
+  rpc Create (Prodotto) returns (Prodotto);
+}",test
+proto_421,sensori,"Crea servizio per sensori con sensore id, temperatura","syntax = ""proto3"";
+
+message Sensoro {
+  string sensore_id = 1;
+  double temperatura = 2;
+}
+
+message SensoroList {
+  repeated Sensoro items = 1;
+}
+
+message Empty {}
+
+message SensoroId {
+  string id = 1;
+}
+
+service SensoroService {
+  rpc GetAll (Empty) returns (SensoroList);
+  rpc GetById (SensoroId) returns (Sensoro);
+  rpc Create (Sensoro) returns (Sensoro);
+}",test
+proto_422,prodotti,"Gestisci prodotti con sku, nome, prezzo","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+  double prezzo = 3;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+
+service ProdottoService {
+  rpc GetAll (Empty) returns (ProdottoList);
+  rpc GetById (ProdottoId) returns (Prodotto);
+  rpc Create (Prodotto) returns (Prodotto);
+}",test
+proto_423,utenti,"API per utenti con email, nome","syntax = ""proto3"";
+
+message Utento {
+  string email = 1;
+  string nome = 2;
+}
+
+message UtentoList {
+  repeated Utento items = 1;
+}
+
+message Empty {}
+
+message UtentoId {
+  string id = 1;
+}
+",test
+proto_424,pagamenti,"Gestisci pagamenti con transazione id, importo, valuta","syntax = ""proto3"";
+
+message Pagamento {
+  string transazione_id = 1;
+  double importo = 2;
+  string valuta = 3;
+}
+
+message PagamentoList {
+  repeated Pagamento items = 1;
+}
+
+message Empty {}
+
+message PagamentoId {
+  string id = 1;
+}
+
+service PagamentoService {
+  rpc GetAll (Empty) returns (PagamentoList);
+  rpc GetById (PagamentoId) returns (Pagamento);
+  rpc Create (Pagamento) returns (Pagamento);
+}",test
+proto_425,file,"API per file con file id, nome, dimensione","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+  int64 dimensione = 3;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+
+service FileService {
+  rpc GetAll (Empty) returns (FileList);
+  rpc GetById (FileId) returns (File);
+  rpc Create (File) returns (File);
+}",test
+proto_426,file,"Sistema di file con file id, nome","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+
+service FileService {
+  rpc GetAll (Empty) returns (FileList);
+  rpc GetById (FileId) returns (File);
+  rpc Create (File) returns (File);
+}",test
+proto_427,inventario,"Gestisci inventario con sku, quantita disponibile, magazzino","syntax = ""proto3"";
+
+message Inventario {
+  string sku = 1;
+  int32 quantita_disponibile = 2;
+  string magazzino = 3;
+}
+
+message InventarioList {
+  repeated Inventario items = 1;
+}
+
+message Empty {}
+
+message InventarioId {
+  string id = 1;
+}
+",test
+proto_428,prodotti,"Sistema di prodotti con sku, nome, prezzo","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+  double prezzo = 3;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+
+service ProdottoService {
+  rpc GetAll (Empty) returns (ProdottoList);
+  rpc GetById (ProdottoId) returns (Prodotto);
+  rpc Create (Prodotto) returns (Prodotto);
+}",test
+proto_429,pagamenti,"API per pagamenti con transazione id, importo, valuta","syntax = ""proto3"";
+
+message Pagamento {
+  string transazione_id = 1;
+  double importo = 2;
+  string valuta = 3;
+}
+
+message PagamentoList {
+  repeated Pagamento items = 1;
+}
+
+message Empty {}
+
+message PagamentoId {
+  string id = 1;
+}
+
+service PagamentoService {
+  rpc GetAll (Empty) returns (PagamentoList);
+  rpc GetById (PagamentoId) returns (Pagamento);
+  rpc Create (Pagamento) returns (Pagamento);
+}",test
+proto_430,notifiche,"Crea servizio per notifiche con notifica id, utente id, titolo","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+  string titolo = 3;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+
+service NotificheService {
+  rpc GetAll (Empty) returns (NotificheList);
+  rpc GetById (NotificheId) returns (Notifiche);
+  rpc Create (Notifiche) returns (Notifiche);
+}",test
+proto_431,notifiche,"Sistema di notifiche con notifica id, utente id","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+
+service NotificheService {
+  rpc GetAll (Empty) returns (NotificheList);
+  rpc GetById (NotificheId) returns (Notifiche);
+  rpc Create (Notifiche) returns (Notifiche);
+}",test
+proto_432,ordini,"Crea servizio per ordini con order id, customer id, totale","syntax = ""proto3"";
+
+message Ordino {
+  string order_id = 1;
+  string customer_id = 2;
+  double totale = 3;
+}
+
+message OrdinoList {
+  repeated Ordino items = 1;
+}
+
+message Empty {}
+
+message OrdinoId {
+  string id = 1;
+}
+
+service OrdinoService {
+  rpc GetAll (Empty) returns (OrdinoList);
+  rpc GetById (OrdinoId) returns (Ordino);
+  rpc Create (Ordino) returns (Ordino);
+}",test
+proto_433,ordini,"Sistema di ordini con order id, customer id","syntax = ""proto3"";
+
+message Ordino {
+  string order_id = 1;
+  string customer_id = 2;
+}
+
+message OrdinoList {
+  repeated Ordino items = 1;
+}
+
+message Empty {}
+
+message OrdinoId {
+  string id = 1;
+}
+
+service OrdinoService {
+  rpc GetAll (Empty) returns (OrdinoList);
+  rpc GetById (OrdinoId) returns (Ordino);
+  rpc Create (Ordino) returns (Ordino);
+}",test
+proto_434,chat,"Crea servizio per chat con messaggio id, mittente, testo","syntax = ""proto3"";
+
+message Chat {
+  string messaggio_id = 1;
+  string mittente = 2;
+  string testo = 3;
+}
+
+message ChatList {
+  repeated Chat items = 1;
+}
+
+message Empty {}
+
+message ChatId {
+  string id = 1;
+}
+
+service ChatService {
+  rpc GetAll (Empty) returns (ChatList);
+  rpc GetById (ChatId) returns (Chat);
+  rpc Create (Chat) returns (Chat);
+}",test
+proto_435,notifiche,"Crea servizio per notifiche con notifica id, utente id, titolo","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+  string titolo = 3;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+",test
+proto_436,file,"API per file con file id, nome, dimensione","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+  int64 dimensione = 3;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+
+service FileService {
+  rpc GetAll (Empty) returns (FileList);
+  rpc GetById (FileId) returns (File);
+  rpc Create (File) returns (File);
+}",test
+proto_437,file,"Sistema di file con file id, nome","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+",test
+proto_438,sensori,"Crea servizio per sensori con sensore id, temperatura, umidita","syntax = ""proto3"";
+
+message Sensoro {
+  string sensore_id = 1;
+  double temperatura = 2;
+  double umidita = 3;
+}
+
+message SensoroList {
+  repeated Sensoro items = 1;
+}
+
+message Empty {}
+
+message SensoroId {
+  string id = 1;
+}
+
+service SensoroService {
+  rpc GetAll (Empty) returns (SensoroList);
+  rpc GetById (SensoroId) returns (Sensoro);
+  rpc Create (Sensoro) returns (Sensoro);
+}",test
+proto_439,chat,"API per chat con messaggio id, mittente, testo","syntax = ""proto3"";
+
+message Chat {
+  string messaggio_id = 1;
+  string mittente = 2;
+  string testo = 3;
+}
+
+message ChatList {
+  repeated Chat items = 1;
+}
+
+message Empty {}
+
+message ChatId {
+  string id = 1;
+}
+",test
+proto_440,file,"Gestisci file con file id, nome, dimensione","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+  int64 dimensione = 3;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+
+service FileService {
+  rpc GetAll (Empty) returns (FileList);
+  rpc GetById (FileId) returns (File);
+  rpc Create (File) returns (File);
+}",test
+proto_441,ordini,"API per ordini con order id, customer id, totale","syntax = ""proto3"";
+
+message Ordino {
+  string order_id = 1;
+  string customer_id = 2;
+  double totale = 3;
+}
+
+message OrdinoList {
+  repeated Ordino items = 1;
+}
+
+message Empty {}
+
+message OrdinoId {
+  string id = 1;
+}
+",test
+proto_442,notifiche,"Sistema di notifiche con notifica id, utente id, titolo","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+  string titolo = 3;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+
+service NotificheService {
+  rpc GetAll (Empty) returns (NotificheList);
+  rpc GetById (NotificheId) returns (Notifiche);
+  rpc Create (Notifiche) returns (Notifiche);
+}",test
+proto_443,utenti,"API per utenti con email, nome","syntax = ""proto3"";
+
+message Utento {
+  string email = 1;
+  string nome = 2;
+}
+
+message UtentoList {
+  repeated Utento items = 1;
+}
+
+message Empty {}
+
+message UtentoId {
+  string id = 1;
+}
+
+service UtentoService {
+  rpc GetAll (Empty) returns (UtentoList);
+  rpc GetById (UtentoId) returns (Utento);
+  rpc Create (Utento) returns (Utento);
+}",test
+proto_444,ordini,"API per ordini con order id, customer id, totale","syntax = ""proto3"";
+
+message Ordino {
+  string order_id = 1;
+  string customer_id = 2;
+  double totale = 3;
+}
+
+message OrdinoList {
+  repeated Ordino items = 1;
+}
+
+message Empty {}
+
+message OrdinoId {
+  string id = 1;
+}
+
+service OrdinoService {
+  rpc GetAll (Empty) returns (OrdinoList);
+  rpc GetById (OrdinoId) returns (Ordino);
+  rpc Create (Ordino) returns (Ordino);
+}",test
+proto_445,chat,"Gestisci chat con messaggio id, mittente","syntax = ""proto3"";
+
+message Chat {
+  string messaggio_id = 1;
+  string mittente = 2;
+}
+
+message ChatList {
+  repeated Chat items = 1;
+}
+
+message Empty {}
+
+message ChatId {
+  string id = 1;
+}
+",test
+proto_446,autenticazione,"API per autenticazione con username, token, scadenza","syntax = ""proto3"";
+
+message Autenticazione {
+  string username = 1;
+  string token = 2;
+  int64 scadenza = 3;
+}
+
+message AutenticazioneList {
+  repeated Autenticazione items = 1;
+}
+
+message Empty {}
+
+message AutenticazioneId {
+  string id = 1;
+}
+
+service AutenticazioneService {
+  rpc GetAll (Empty) returns (AutenticazioneList);
+  rpc GetById (AutenticazioneId) returns (Autenticazione);
+  rpc Create (Autenticazione) returns (Autenticazione);
+}",test
+proto_447,sensori,"Crea servizio per sensori con sensore id, temperatura, umidita","syntax = ""proto3"";
+
+message Sensoro {
+  string sensore_id = 1;
+  double temperatura = 2;
+  double umidita = 3;
+}
+
+message SensoroList {
+  repeated Sensoro items = 1;
+}
+
+message Empty {}
+
+message SensoroId {
+  string id = 1;
+}
+
+service SensoroService {
+  rpc GetAll (Empty) returns (SensoroList);
+  rpc GetById (SensoroId) returns (Sensoro);
+  rpc Create (Sensoro) returns (Sensoro);
+}",test
+proto_448,chat,"Gestisci chat con messaggio id, mittente, testo","syntax = ""proto3"";
+
+message Chat {
+  string messaggio_id = 1;
+  string mittente = 2;
+  string testo = 3;
+}
+
+message ChatList {
+  repeated Chat items = 1;
+}
+
+message Empty {}
+
+message ChatId {
+  string id = 1;
+}
+
+service ChatService {
+  rpc GetAll (Empty) returns (ChatList);
+  rpc GetById (ChatId) returns (Chat);
+  rpc Create (Chat) returns (Chat);
+}",test
+proto_449,utenti,"Sistema di utenti con email, nome","syntax = ""proto3"";
+
+message Utento {
+  string email = 1;
+  string nome = 2;
+}
+
+message UtentoList {
+  repeated Utento items = 1;
+}
+
+message Empty {}
+
+message UtentoId {
+  string id = 1;
+}
+
+service UtentoService {
+  rpc GetAll (Empty) returns (UtentoList);
+  rpc GetById (UtentoId) returns (Utento);
+  rpc Create (Utento) returns (Utento);
+}",test
+proto_450,sensori,"Crea servizio per sensori con sensore id, temperatura, umidita","syntax = ""proto3"";
+
+message Sensoro {
+  string sensore_id = 1;
+  double temperatura = 2;
+  double umidita = 3;
+}
+
+message SensoroList {
+  repeated Sensoro items = 1;
+}
+
+message Empty {}
+
+message SensoroId {
+  string id = 1;
+}
+",test
+proto_451,notifiche,"API per notifiche con notifica id, utente id, titolo","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+  string titolo = 3;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+",test
+proto_452,chat,"Sistema di chat con messaggio id, mittente, testo","syntax = ""proto3"";
+
+message Chat {
+  string messaggio_id = 1;
+  string mittente = 2;
+  string testo = 3;
+}
+
+message ChatList {
+  repeated Chat items = 1;
+}
+
+message Empty {}
+
+message ChatId {
+  string id = 1;
+}
+
+service ChatService {
+  rpc GetAll (Empty) returns (ChatList);
+  rpc GetById (ChatId) returns (Chat);
+  rpc Create (Chat) returns (Chat);
+}",test
+proto_453,chat,"Gestisci chat con messaggio id, mittente, testo","syntax = ""proto3"";
+
+message Chat {
+  string messaggio_id = 1;
+  string mittente = 2;
+  string testo = 3;
+}
+
+message ChatList {
+  repeated Chat items = 1;
+}
+
+message Empty {}
+
+message ChatId {
+  string id = 1;
+}
+
+service ChatService {
+  rpc GetAll (Empty) returns (ChatList);
+  rpc GetById (ChatId) returns (Chat);
+  rpc Create (Chat) returns (Chat);
+}",test
+proto_454,notifiche,"Sistema di notifiche con notifica id, utente id, titolo","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+  string titolo = 3;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+
+service NotificheService {
+  rpc GetAll (Empty) returns (NotificheList);
+  rpc GetById (NotificheId) returns (Notifiche);
+  rpc Create (Notifiche) returns (Notifiche);
+}",test
+proto_455,chat,"Gestisci chat con messaggio id, mittente, testo","syntax = ""proto3"";
+
+message Chat {
+  string messaggio_id = 1;
+  string mittente = 2;
+  string testo = 3;
+}
+
+message ChatList {
+  repeated Chat items = 1;
+}
+
+message Empty {}
+
+message ChatId {
+  string id = 1;
+}
+
+service ChatService {
+  rpc GetAll (Empty) returns (ChatList);
+  rpc GetById (ChatId) returns (Chat);
+  rpc Create (Chat) returns (Chat);
+}",test
+proto_456,chat,"Crea servizio per chat con messaggio id, mittente, testo","syntax = ""proto3"";
+
+message Chat {
+  string messaggio_id = 1;
+  string mittente = 2;
+  string testo = 3;
+}
+
+message ChatList {
+  repeated Chat items = 1;
+}
+
+message Empty {}
+
+message ChatId {
+  string id = 1;
+}
+
+service ChatService {
+  rpc GetAll (Empty) returns (ChatList);
+  rpc GetById (ChatId) returns (Chat);
+  rpc Create (Chat) returns (Chat);
+}",test
+proto_457,utenti,"Sistema di utenti con email, nome, cognome","syntax = ""proto3"";
+
+message Utento {
+  string email = 1;
+  string nome = 2;
+  string cognome = 3;
+}
+
+message UtentoList {
+  repeated Utento items = 1;
+}
+
+message Empty {}
+
+message UtentoId {
+  string id = 1;
+}
+",test
+proto_458,prodotti,"Gestisci prodotti con sku, nome","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+",test
+proto_459,pagamenti,"Sistema di pagamenti con transazione id, importo","syntax = ""proto3"";
+
+message Pagamento {
+  string transazione_id = 1;
+  double importo = 2;
+}
+
+message PagamentoList {
+  repeated Pagamento items = 1;
+}
+
+message Empty {}
+
+message PagamentoId {
+  string id = 1;
+}
+
+service PagamentoService {
+  rpc GetAll (Empty) returns (PagamentoList);
+  rpc GetById (PagamentoId) returns (Pagamento);
+  rpc Create (Pagamento) returns (Pagamento);
+}",test
+proto_460,prodotti,"Sistema di prodotti con sku, nome, prezzo","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+  double prezzo = 3;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+
+service ProdottoService {
+  rpc GetAll (Empty) returns (ProdottoList);
+  rpc GetById (ProdottoId) returns (Prodotto);
+  rpc Create (Prodotto) returns (Prodotto);
+}",test
+proto_461,sensori,"Gestisci sensori con sensore id, temperatura, umidita","syntax = ""proto3"";
+
+message Sensoro {
+  string sensore_id = 1;
+  double temperatura = 2;
+  double umidita = 3;
+}
+
+message SensoroList {
+  repeated Sensoro items = 1;
+}
+
+message Empty {}
+
+message SensoroId {
+  string id = 1;
+}
+
+service SensoroService {
+  rpc GetAll (Empty) returns (SensoroList);
+  rpc GetById (SensoroId) returns (Sensoro);
+  rpc Create (Sensoro) returns (Sensoro);
+}",test
+proto_462,prodotti,"Sistema di prodotti con sku, nome","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+
+service ProdottoService {
+  rpc GetAll (Empty) returns (ProdottoList);
+  rpc GetById (ProdottoId) returns (Prodotto);
+  rpc Create (Prodotto) returns (Prodotto);
+}",test
+proto_463,sensori,"Crea servizio per sensori con sensore id, temperatura, umidita","syntax = ""proto3"";
+
+message Sensoro {
+  string sensore_id = 1;
+  double temperatura = 2;
+  double umidita = 3;
+}
+
+message SensoroList {
+  repeated Sensoro items = 1;
+}
+
+message Empty {}
+
+message SensoroId {
+  string id = 1;
+}
+
+service SensoroService {
+  rpc GetAll (Empty) returns (SensoroList);
+  rpc GetById (SensoroId) returns (Sensoro);
+  rpc Create (Sensoro) returns (Sensoro);
+}",test
+proto_464,file,"API per file con file id, nome, dimensione","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+  int64 dimensione = 3;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+
+service FileService {
+  rpc GetAll (Empty) returns (FileList);
+  rpc GetById (FileId) returns (File);
+  rpc Create (File) returns (File);
+}",test
+proto_465,chat,"Crea servizio per chat con messaggio id, mittente, testo","syntax = ""proto3"";
+
+message Chat {
+  string messaggio_id = 1;
+  string mittente = 2;
+  string testo = 3;
+}
+
+message ChatList {
+  repeated Chat items = 1;
+}
+
+message Empty {}
+
+message ChatId {
+  string id = 1;
+}
+",test
+proto_466,inventario,"API per inventario con sku, quantita disponibile, magazzino","syntax = ""proto3"";
+
+message Inventario {
+  string sku = 1;
+  int32 quantita_disponibile = 2;
+  string magazzino = 3;
+}
+
+message InventarioList {
+  repeated Inventario items = 1;
+}
+
+message Empty {}
+
+message InventarioId {
+  string id = 1;
+}
+
+service InventarioService {
+  rpc GetAll (Empty) returns (InventarioList);
+  rpc GetById (InventarioId) returns (Inventario);
+  rpc Create (Inventario) returns (Inventario);
+}",test
+proto_467,inventario,"Sistema di inventario con sku, quantita disponibile","syntax = ""proto3"";
+
+message Inventario {
+  string sku = 1;
+  int32 quantita_disponibile = 2;
+}
+
+message InventarioList {
+  repeated Inventario items = 1;
+}
+
+message Empty {}
+
+message InventarioId {
+  string id = 1;
+}
+
+service InventarioService {
+  rpc GetAll (Empty) returns (InventarioList);
+  rpc GetById (InventarioId) returns (Inventario);
+  rpc Create (Inventario) returns (Inventario);
+}",test
+proto_468,notifiche,"API per notifiche con notifica id, utente id, titolo","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+  string titolo = 3;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+
+service NotificheService {
+  rpc GetAll (Empty) returns (NotificheList);
+  rpc GetById (NotificheId) returns (Notifiche);
+  rpc Create (Notifiche) returns (Notifiche);
+}",test
+proto_469,inventario,"Sistema di inventario con sku, quantita disponibile","syntax = ""proto3"";
+
+message Inventario {
+  string sku = 1;
+  int32 quantita_disponibile = 2;
+}
+
+message InventarioList {
+  repeated Inventario items = 1;
+}
+
+message Empty {}
+
+message InventarioId {
+  string id = 1;
+}
+
+service InventarioService {
+  rpc GetAll (Empty) returns (InventarioList);
+  rpc GetById (InventarioId) returns (Inventario);
+  rpc Create (Inventario) returns (Inventario);
+}",test
+proto_470,autenticazione,"Crea servizio per autenticazione con username, token, scadenza","syntax = ""proto3"";
+
+message Autenticazione {
+  string username = 1;
+  string token = 2;
+  int64 scadenza = 3;
+}
+
+message AutenticazioneList {
+  repeated Autenticazione items = 1;
+}
+
+message Empty {}
+
+message AutenticazioneId {
+  string id = 1;
+}
+
+service AutenticazioneService {
+  rpc GetAll (Empty) returns (AutenticazioneList);
+  rpc GetById (AutenticazioneId) returns (Autenticazione);
+  rpc Create (Autenticazione) returns (Autenticazione);
+}",test
+proto_471,inventario,"Gestisci inventario con sku, quantita disponibile","syntax = ""proto3"";
+
+message Inventario {
+  string sku = 1;
+  int32 quantita_disponibile = 2;
+}
+
+message InventarioList {
+  repeated Inventario items = 1;
+}
+
+message Empty {}
+
+message InventarioId {
+  string id = 1;
+}
+
+service InventarioService {
+  rpc GetAll (Empty) returns (InventarioList);
+  rpc GetById (InventarioId) returns (Inventario);
+  rpc Create (Inventario) returns (Inventario);
+}",test
+proto_472,notifiche,"Sistema di notifiche con notifica id, utente id, titolo","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+  string titolo = 3;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+
+service NotificheService {
+  rpc GetAll (Empty) returns (NotificheList);
+  rpc GetById (NotificheId) returns (Notifiche);
+  rpc Create (Notifiche) returns (Notifiche);
+}",test
+proto_473,pagamenti,"API per pagamenti con transazione id, importo","syntax = ""proto3"";
+
+message Pagamento {
+  string transazione_id = 1;
+  double importo = 2;
+}
+
+message PagamentoList {
+  repeated Pagamento items = 1;
+}
+
+message Empty {}
+
+message PagamentoId {
+  string id = 1;
+}
+
+service PagamentoService {
+  rpc GetAll (Empty) returns (PagamentoList);
+  rpc GetById (PagamentoId) returns (Pagamento);
+  rpc Create (Pagamento) returns (Pagamento);
+}",test
+proto_474,sensori,"Crea servizio per sensori con sensore id, temperatura, umidita","syntax = ""proto3"";
+
+message Sensoro {
+  string sensore_id = 1;
+  double temperatura = 2;
+  double umidita = 3;
+}
+
+message SensoroList {
+  repeated Sensoro items = 1;
+}
+
+message Empty {}
+
+message SensoroId {
+  string id = 1;
+}
+",test
+proto_475,pagamenti,"Crea servizio per pagamenti con transazione id, importo","syntax = ""proto3"";
+
+message Pagamento {
+  string transazione_id = 1;
+  double importo = 2;
+}
+
+message PagamentoList {
+  repeated Pagamento items = 1;
+}
+
+message Empty {}
+
+message PagamentoId {
+  string id = 1;
+}
+
+service PagamentoService {
+  rpc GetAll (Empty) returns (PagamentoList);
+  rpc GetById (PagamentoId) returns (Pagamento);
+  rpc Create (Pagamento) returns (Pagamento);
+}",test
+proto_476,pagamenti,"API per pagamenti con transazione id, importo","syntax = ""proto3"";
+
+message Pagamento {
+  string transazione_id = 1;
+  double importo = 2;
+}
+
+message PagamentoList {
+  repeated Pagamento items = 1;
+}
+
+message Empty {}
+
+message PagamentoId {
+  string id = 1;
+}
+",test
+proto_477,file,"Crea servizio per file con file id, nome","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+
+service FileService {
+  rpc GetAll (Empty) returns (FileList);
+  rpc GetById (FileId) returns (File);
+  rpc Create (File) returns (File);
+}",test
+proto_478,utenti,"Sistema di utenti con email, nome","syntax = ""proto3"";
+
+message Utento {
+  string email = 1;
+  string nome = 2;
+}
+
+message UtentoList {
+  repeated Utento items = 1;
+}
+
+message Empty {}
+
+message UtentoId {
+  string id = 1;
+}
+
+service UtentoService {
+  rpc GetAll (Empty) returns (UtentoList);
+  rpc GetById (UtentoId) returns (Utento);
+  rpc Create (Utento) returns (Utento);
+}",test
+proto_479,file,"API per file con file id, nome","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+
+service FileService {
+  rpc GetAll (Empty) returns (FileList);
+  rpc GetById (FileId) returns (File);
+  rpc Create (File) returns (File);
+}",test
+proto_480,notifiche,"Gestisci notifiche con notifica id, utente id, titolo","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+  string titolo = 3;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+
+service NotificheService {
+  rpc GetAll (Empty) returns (NotificheList);
+  rpc GetById (NotificheId) returns (Notifiche);
+  rpc Create (Notifiche) returns (Notifiche);
+}",test
+proto_481,chat,"Gestisci chat con messaggio id, mittente","syntax = ""proto3"";
+
+message Chat {
+  string messaggio_id = 1;
+  string mittente = 2;
+}
+
+message ChatList {
+  repeated Chat items = 1;
+}
+
+message Empty {}
+
+message ChatId {
+  string id = 1;
+}
+
+service ChatService {
+  rpc GetAll (Empty) returns (ChatList);
+  rpc GetById (ChatId) returns (Chat);
+  rpc Create (Chat) returns (Chat);
+}",test
+proto_482,prodotti,"Crea servizio per prodotti con sku, nome, prezzo","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+  double prezzo = 3;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+
+service ProdottoService {
+  rpc GetAll (Empty) returns (ProdottoList);
+  rpc GetById (ProdottoId) returns (Prodotto);
+  rpc Create (Prodotto) returns (Prodotto);
+}",test
+proto_483,utenti,"Crea servizio per utenti con email, nome, cognome","syntax = ""proto3"";
+
+message Utento {
+  string email = 1;
+  string nome = 2;
+  string cognome = 3;
+}
+
+message UtentoList {
+  repeated Utento items = 1;
+}
+
+message Empty {}
+
+message UtentoId {
+  string id = 1;
+}
+
+service UtentoService {
+  rpc GetAll (Empty) returns (UtentoList);
+  rpc GetById (UtentoId) returns (Utento);
+  rpc Create (Utento) returns (Utento);
+}",test
+proto_484,inventario,"Gestisci inventario con sku, quantita disponibile","syntax = ""proto3"";
+
+message Inventario {
+  string sku = 1;
+  int32 quantita_disponibile = 2;
+}
+
+message InventarioList {
+  repeated Inventario items = 1;
+}
+
+message Empty {}
+
+message InventarioId {
+  string id = 1;
+}
+",test
+proto_485,notifiche,"Sistema di notifiche con notifica id, utente id, titolo","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+  string titolo = 3;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+
+service NotificheService {
+  rpc GetAll (Empty) returns (NotificheList);
+  rpc GetById (NotificheId) returns (Notifiche);
+  rpc Create (Notifiche) returns (Notifiche);
+}",test
+proto_486,prodotti,"Gestisci prodotti con sku, nome, prezzo","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+  double prezzo = 3;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+
+service ProdottoService {
+  rpc GetAll (Empty) returns (ProdottoList);
+  rpc GetById (ProdottoId) returns (Prodotto);
+  rpc Create (Prodotto) returns (Prodotto);
+}",test
+proto_487,notifiche,"API per notifiche con notifica id, utente id","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+
+service NotificheService {
+  rpc GetAll (Empty) returns (NotificheList);
+  rpc GetById (NotificheId) returns (Notifiche);
+  rpc Create (Notifiche) returns (Notifiche);
+}",test
+proto_488,prodotti,"API per prodotti con sku, nome","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+
+service ProdottoService {
+  rpc GetAll (Empty) returns (ProdottoList);
+  rpc GetById (ProdottoId) returns (Prodotto);
+  rpc Create (Prodotto) returns (Prodotto);
+}",test
+proto_489,chat,"Sistema di chat con messaggio id, mittente","syntax = ""proto3"";
+
+message Chat {
+  string messaggio_id = 1;
+  string mittente = 2;
+}
+
+message ChatList {
+  repeated Chat items = 1;
+}
+
+message Empty {}
+
+message ChatId {
+  string id = 1;
+}
+",test
+proto_490,autenticazione,"Gestisci autenticazione con username, token, scadenza","syntax = ""proto3"";
+
+message Autenticazione {
+  string username = 1;
+  string token = 2;
+  int64 scadenza = 3;
+}
+
+message AutenticazioneList {
+  repeated Autenticazione items = 1;
+}
+
+message Empty {}
+
+message AutenticazioneId {
+  string id = 1;
+}
+",test
+proto_491,prodotti,"Crea servizio per prodotti con sku, nome","syntax = ""proto3"";
+
+message Prodotto {
+  string sku = 1;
+  string nome = 2;
+}
+
+message ProdottoList {
+  repeated Prodotto items = 1;
+}
+
+message Empty {}
+
+message ProdottoId {
+  string id = 1;
+}
+
+service ProdottoService {
+  rpc GetAll (Empty) returns (ProdottoList);
+  rpc GetById (ProdottoId) returns (Prodotto);
+  rpc Create (Prodotto) returns (Prodotto);
+}",test
+proto_492,utenti,"Sistema di utenti con email, nome, cognome","syntax = ""proto3"";
+
+message Utento {
+  string email = 1;
+  string nome = 2;
+  string cognome = 3;
+}
+
+message UtentoList {
+  repeated Utento items = 1;
+}
+
+message Empty {}
+
+message UtentoId {
+  string id = 1;
+}
+
+service UtentoService {
+  rpc GetAll (Empty) returns (UtentoList);
+  rpc GetById (UtentoId) returns (Utento);
+  rpc Create (Utento) returns (Utento);
+}",test
+proto_493,inventario,"Gestisci inventario con sku, quantita disponibile, magazzino","syntax = ""proto3"";
+
+message Inventario {
+  string sku = 1;
+  int32 quantita_disponibile = 2;
+  string magazzino = 3;
+}
+
+message InventarioList {
+  repeated Inventario items = 1;
+}
+
+message Empty {}
+
+message InventarioId {
+  string id = 1;
+}
+
+service InventarioService {
+  rpc GetAll (Empty) returns (InventarioList);
+  rpc GetById (InventarioId) returns (Inventario);
+  rpc Create (Inventario) returns (Inventario);
+}",test
+proto_494,inventario,"Gestisci inventario con sku, quantita disponibile, magazzino","syntax = ""proto3"";
+
+message Inventario {
+  string sku = 1;
+  int32 quantita_disponibile = 2;
+  string magazzino = 3;
+}
+
+message InventarioList {
+  repeated Inventario items = 1;
+}
+
+message Empty {}
+
+message InventarioId {
+  string id = 1;
+}
+
+service InventarioService {
+  rpc GetAll (Empty) returns (InventarioList);
+  rpc GetById (InventarioId) returns (Inventario);
+  rpc Create (Inventario) returns (Inventario);
+}",test
+proto_495,ordini,"Sistema di ordini con order id, customer id, totale","syntax = ""proto3"";
+
+message Ordino {
+  string order_id = 1;
+  string customer_id = 2;
+  double totale = 3;
+}
+
+message OrdinoList {
+  repeated Ordino items = 1;
+}
+
+message Empty {}
+
+message OrdinoId {
+  string id = 1;
+}
+
+service OrdinoService {
+  rpc GetAll (Empty) returns (OrdinoList);
+  rpc GetById (OrdinoId) returns (Ordino);
+  rpc Create (Ordino) returns (Ordino);
+}",test
+proto_496,sensori,"API per sensori con sensore id, temperatura, umidita","syntax = ""proto3"";
+
+message Sensoro {
+  string sensore_id = 1;
+  double temperatura = 2;
+  double umidita = 3;
+}
+
+message SensoroList {
+  repeated Sensoro items = 1;
+}
+
+message Empty {}
+
+message SensoroId {
+  string id = 1;
+}
+
+service SensoroService {
+  rpc GetAll (Empty) returns (SensoroList);
+  rpc GetById (SensoroId) returns (Sensoro);
+  rpc Create (Sensoro) returns (Sensoro);
+}",test
+proto_497,notifiche,"Crea servizio per notifiche con notifica id, utente id","syntax = ""proto3"";
+
+message Notifiche {
+  string notifica_id = 1;
+  string utente_id = 2;
+}
+
+message NotificheList {
+  repeated Notifiche items = 1;
+}
+
+message Empty {}
+
+message NotificheId {
+  string id = 1;
+}
+
+service NotificheService {
+  rpc GetAll (Empty) returns (NotificheList);
+  rpc GetById (NotificheId) returns (Notifiche);
+  rpc Create (Notifiche) returns (Notifiche);
+}",test
+proto_498,file,"API per file con file id, nome","syntax = ""proto3"";
+
+message File {
+  string file_id = 1;
+  string nome = 2;
+}
+
+message FileList {
+  repeated File items = 1;
+}
+
+message Empty {}
+
+message FileId {
+  string id = 1;
+}
+
+service FileService {
+  rpc GetAll (Empty) returns (FileList);
+  rpc GetById (FileId) returns (File);
+  rpc Create (File) returns (File);
+}",test
+proto_499,autenticazione,"Crea servizio per autenticazione con username, token, scadenza","syntax = ""proto3"";
+
+message Autenticazione {
+  string username = 1;
+  string token = 2;
+  int64 scadenza = 3;
+}
+
+message AutenticazioneList {
+  repeated Autenticazione items = 1;
+}
+
+message Empty {}
+
+message AutenticazioneId {
+  string id = 1;
+}
+
+service AutenticazioneService {
+  rpc GetAll (Empty) returns (AutenticazioneList);
+  rpc GetById (AutenticazioneId) returns (Autenticazione);
+  rpc Create (Autenticazione) returns (Autenticazione);
+}",test
